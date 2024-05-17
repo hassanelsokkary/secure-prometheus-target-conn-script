@@ -23,7 +23,7 @@ A simple script to enable basic auth and TLS encryption to the connection of pro
   Now, scraping of metric data from targets is secured using TLS and Basic Authentication.
 
 # Modifying parameters in script
-  - On target script, you can edit openssl cmd to customize your ssl
+  - On target script 'secure_node_exporter.sh', you can edit openssl cmd to customize your ssl
         openssl req -x509 \
         -newkey rsa:4096 \
         -nodes \
