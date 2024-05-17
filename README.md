@@ -15,7 +15,7 @@ A simple script to enable basic auth and TLS encryption to the connection of Pro
   3. cd to PrometheusServer dir.
   4. Execute script using 'sudo bash configure_server.sh'
   5. Enter same password used on target server script.
-  6. Enter job_name of target server (can be found at /etc/prometheus/prometheus.yml),
+  6. Enter job_name of target server (can be found at /etc/prometheus/prometheus.yml), <br />
      THIS IS IMPORTANT AND CASE-SENSITIVE!
      Specifying wrong name breaks the script, and it will not modify config file.
   8. If it prompts 'Config updated successfully.', then you are done.
@@ -28,10 +28,11 @@ A simple script to enable basic auth and TLS encryption to the connection of Pro
         openssl req -x509 \
         -newkey rsa:4096 \
         -nodes \
-        -days 365 \    # This no of days the certificate will remain valid.
-        -keyout /etc/node_exporter/node_exporter.key \
-        -out /etc/node_exporter/node_exporter.crt \
-        -subj "/O=MyCompany/OU=MyDivision/CN=mydomain.local" \ #This CN, OU and other names, customize to your preference.
-	      -addext "subjectAltName = DNS:mydomain.local"      # This should match CN for prometheus server to be able to validate target identity.
+        -days 365 \ <br />     # This no of days the certificate will remain valid. <br />
+        -keyout /etc/node_exporter/node_exporter.key \ <br />
+        -out /etc/node_exporter/node_exporter.crt \  <br />
+        -subj "/O=MyCompany/OU=MyDivision/CN=mydomain.local" \ <br />
+	 #This CN, OU and other names, customize to your preference. <br />
+	      -addext "subjectAltName = DNS:mydomain.local"      <br /> # This should match CN for prometheus server to be able to validate target identity. <br />
 
     You can as well, use your own certificate if you have one for your owned domain and not issue this command at all.
