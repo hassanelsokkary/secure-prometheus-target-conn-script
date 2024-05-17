@@ -15,9 +15,10 @@ A simple script to enable basic auth and TLS encryption to the connection of pro
   3. cd to PrometheusServer dir.
   4. Execute script using 'sudo bash configure_server.sh'
   5. Enter same password used on target server script.
-  6. Enter job_name of target server (can be found at /etc/prometheus/prometheus.yml), THIS IS IMPORTANT AND CASE-SENSITIVE!
+  6. Enter job_name of target server (can be found at /etc/prometheus/prometheus.yml),
+     THIS IS IMPORTANT AND CASE-SENSITIVE!
      Specifying wrong name breaks the script, and it will not modify config file.
-  7. If it prompts 'Config updated successfully.', then you are done.
+  8. If it prompts 'Config updated successfully.', then you are done.
 
   and you have completed!
   Now, scraping of metric data from targets is secured using TLS and Basic Authentication.
