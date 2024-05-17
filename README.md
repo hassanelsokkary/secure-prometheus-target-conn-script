@@ -1,5 +1,5 @@
 # secure-prometheus-target-conn-script
-A simple script to enable basic auth and TLS encryption to the connection of prometheus server to a target server.
+A simple script to enable basic auth and TLS encryption to the connection of prometheus server to a target server written with bash scripting and python.
 
 # How to use
 - On Target server:
